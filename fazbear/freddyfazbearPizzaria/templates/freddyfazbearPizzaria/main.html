@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freddy Fazbear's Pizza</title>
+    <style>
+        body { background-color: #111; color: #fff; font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; }
+        h1, h2, h3 { text-align: center; }
+        .neon-title { color: #ff00ff; text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 40px #ff00ff; }
+        .neon-sub { color: #0ff; text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff; }
+        .content { padding: 20px; max-width: 800px; margin: 0 auto; border: 2px dashed #333; background-color: #1a1a1a; }
+        .news-alert { color: #ff0000; text-shadow: 0 0 5px #ff0000; border: 1px solid #ff0000; padding: 10px; background-color: #300; }
+        img.placeholder { display: block; margin: 20px auto; max-width: 100%; border: 3px solid #0ff; box-shadow: 0 0 15px #0ff; }
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+    <marquee class="neon-title" scrollamount="10">Welcome to Freddy Fazbear's Pizza! Where fantasy and fun come to life!</marquee>
+    <div class="content">{% block content %}{% endblock %}</div>
+    {% block footer %}{% endblock %}
+</body>
+</html>

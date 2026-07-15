@@ -1,0 +1,34 @@
+{% extends 'freddyfazbearPizzaria/main.html' %}
+
+{% block content %}
+<h1 class="neon-title">Freddy Fazbear's Pizza</h1>
+<p style="text-align: center;">A magical place for kids and grown-ups alike! Enjoy our world-class pizza and arcade games.</p>
+
+<hr style="border-color: #555;">
+
+<h2 class="neon-sub">Meet the Band!</h2>
+<p>Sing and dance with Freddy Fazbear, Bonnie the Bunny, and Chica the Chicken! Don't forget to visit Foxy in Pirate Cove!</p>
+<img src="https://via.placeholder.com/600x300/222/0ff?text=[+Picture+of+Animatronics+]" alt="Animatronic Band" class="placeholder">
+
+<hr style="border-color: #555;">
+
+<h2 class="neon-sub">Popular Menu</h2>
+<ul>
+    <li><strong>Fazbear's Ultimate Pepperoni:</strong> A classic favorite!</li>
+    <li><strong>Chica's Cupcake Surprise:</strong> Sweet and watching you!</li>
+    <li><strong>Foxy's Pirate Punch:</strong> Refreshing and slightly metallic.</li>
+</ul>
+<img src="https://via.placeholder.com/600x300/222/ff00ff?text=[+Picture+of+Menu+]" alt="Pizza Menu" class="placeholder">
+
+<hr style="border-color: #555;">
+
+<div class="news-alert">
+    <h3>LOCAL NEWS & UPDATES</h3>
+    <p><strong>Notice to Patrons:</strong> Management would like to assure all parents that the recent rumors regarding "foul odors" and "missing children" are completely unfounded. Freddy Fazbear's Pizza takes safety very seriously.</p>
+    <p><em>Unfortunately, due to unforeseen health department inspections and budget cuts, the restaurant will be closing its doors at the end of the year. We thank you for your patronage.</em></p>
+</div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'freddyfazbearPizzaria/footer.html' %}
+{% endblock %}
