@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Troubleshooting — Freddy Fazbear's Pizza</title>
+  <link rel="stylesheet" href="{% static 'css/troubleshoot.css' %}">
+  <script src="{% static 'script/troubleshoot.js' %}" defer></script>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <nav>
+      <a href="freddy-fazbears-pizza.html">Site</a>
+      <a href="admin.html">Admin</a>
+      <a href="employee-monitoring.html">Staff Monitor</a>
+      <a href="troubleshoot.html" class="active">Troubleshoot</a>
+    </nav>
+    <span class="badge">RESTRICTED ACCESS</span>
+  </div>
+
+  <div class="wrap">
+    <h1>System Troubleshooting</h1>
+    <p class="sub">Diagnostics for building systems and animatronic units</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3><span class="status-dot dot-bad"></span>Foxy — Pirate Cove Unit</h3>
+        <p>Unit shut down unexpectedly at 3:47 AM. Power draw spiked before loss of signal. Battery reads 12%.</p>
+        <button class="act">Attempt remote restart</button>
+        <button class="act danger">Flag for on-site repair</button>
+      </div>
+      <div class="card">
+        <h3><span class="status-dot dot-warn"></span>Chica — Servo Diagnostic</h3>
+        <p>Left arm servo reporting lag during self-test. Not blocking operation, but recommend inspection before doors
+          open.</p>
+        <button class="act">Re-run self-test</button>
+        <button class="act">Schedule inspection</button>
+      </div>
+      <div class="card">
+        <h3><span class="status-dot dot-warn"></span>Camera 04 — Pirate Cove</h3>
+        <p>Feed has been intermittent since last night. Likely a loose connection at the junction box behind the stage
+          curtain.</p>
+        <button class="act">Restart camera feed</button>
+        <button class="act">Log hardware ticket</button>
+      </div>
+      <div class="card">
+        <h3><span class="status-dot dot-warn"></span>Backstage Temperature</h3>
+        <p>Reading 3°F above normal range. Could indicate a vent blockage or the backstage cooling unit cycling
+          improperly.</p>
+        <button class="act">Check HVAC panel</button>
+        <button class="act">Silence alert</button>
+      </div>
+      <div class="card">
+        <h3><span class="status-dot dot-ok"></span>Main Power & Doors</h3>
+        <p>Building power draw at 62%, nominal. Front and back doors both reporting locked with no anomalies overnight.
+        </p>
+        <button class="act">View power log</button>
+      </div>
+      <div class="card">
+        <h3><span class="status-dot dot-ok"></span>Freddy & Bonnie — Show Stage</h3>
+        <p>Both units idling normally, batteries above 90%, no diagnostic flags in the last 12 hours.</p>
+        <button class="act">Run diagnostic anyway</button>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px;">
+      <h3>Common Fixes Reference</h3>
+      <table>
+        <tr>
+          <th>Symptom</th>
+          <th>Likely Cause</th>
+          <th>First Step</th>
+        </tr>
+        <tr>
+          <td>Animatronic unresponsive</td>
+          <td>Low battery or tripped safety lockout</td>
+          <td>Check battery %, then attempt remote restart</td>
+        </tr>
+        <tr>
+          <td>Camera feed frozen or dark</td>
+          <td>Loose cable or camera reboot needed</td>
+          <td>Restart the feed from this panel before dispatching a tech</td>
+        </tr>
+        <tr>
+          <td>Servo lag or grinding noise</td>
+          <td>Needs lubrication or minor calibration</td>
+          <td>Run self-test, schedule inspection if it recurs</td>
+        </tr>
+        <tr>
+          <td>Room temperature drifting</td>
+          <td>Vent blockage or HVAC cycling issue</td>
+          <td>Check HVAC panel, inspect vents nearest the alert</td>
+        </tr>
+        <tr>
+          <td>Door sensor false alarm</td>
+          <td>Sensor misalignment</td>
+          <td>Re-sync sensor from the power & doors panel</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="ticket-form">
+      <h3>Log a New Maintenance Ticket</h3>
+      <label for="area">Affected system</label>
+      <select id="area">
+        <option>Freddy — Show Stage</option>
+        <option>Bonnie — Show Stage</option>
+        <option>Chica — Kitchen</option>
+        <option>Foxy — Pirate Cove</option>
+        <option>Camera / Security</option>
+        <option>HVAC / Temperature</option>
+        <option>Doors / Power</option>
+        <option>Other</option>
+      </select>
+      <label for="details">Describe the issue</label>
+      <textarea id="details" placeholder="What happened, when, and anything you've already tried..."></textarea>
+      <br>
+      <button id="submitTicket">Submit Ticket</button>
+      <div class="confirm" id="confirmMsg">Ticket logged. A technician will review it before the next shift.</div>
+    </div>
+  </div>
+
+  <footer>Fazbear Entertainment — Internal Use Only. This is a fan-made demo interface; ticket submission is not
+    connected to a real system.</footer>
+
+
+</body>
+</html>

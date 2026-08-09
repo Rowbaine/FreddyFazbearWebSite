@@ -1,0 +1,190 @@
+:root {
+    --pink: #ff00ff;
+    --cyan: #0ff;
+    --red: #ff2b2b;
+    --bg: #111;
+    --panel: #1a1a1a;
+    --line: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.neon-title {
+    color: var(--pink);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--pink), 0 0 40px var(--pink);
+}
+
+.neon-sub {
+    color: var(--cyan);
+    text-shadow: 0 0 5px #fff, 0 0 10px var(--cyan), 0 0 20px var(--cyan);
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px dashed var(--line);
+    background-color: var(--panel);
+}
+
+.news-alert {
+    color: var(--red);
+    text-shadow: 0 0 5px var(--red);
+    border: 1px solid var(--red);
+    padding: 10px;
+    background-color: #300;
+}
+
+.placeholder {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border: 3px solid var(--cyan);
+    box-shadow: 0 0 15px var(--cyan);
+    background: #0d0d0d;
+}
+
+/* ---------- TOP BAR ---------- */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #222;
+    padding: 12px 20px;
+    border-bottom: 3px solid var(--pink);
+}
+
+.topbar nav a {
+    color: var(--cyan);
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--cyan);
+}
+
+.topbar nav a.order {
+    color: var(--pink);
+    text-shadow: 0 0 8px var(--pink);
+}
+
+/* ---------- LOGIN BAR ---------- */
+.login-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.login-bar form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.login-bar input[type="text"],
+.login-bar input[type="password"] {
+    background: #0a0a0a;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    font-family: inherit;
+    font-size: 0.85rem;
+    padding: 6px 8px;
+    width: 120px;
+    outline: none;
+}
+
+.login-bar input::placeholder {
+    color: #0a8a8a;
+}
+
+.login-bar input:focus {
+    box-shadow: 0 0 6px var(--cyan);
+    border-color: #fff;
+}
+
+.login-btn {
+    background: transparent;
+    border: 1px solid var(--pink);
+    color: var(--pink);
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--pink);
+    transition: background .15s ease, color .15s ease;
+}
+
+.login-btn:hover {
+    background: var(--pink);
+    color: #111;
+    text-shadow: none;
+    box-shadow: 0 0 10px var(--pink);
+}
+
+.login-status {
+    font-size: 0.8rem;
+    color: #0a8a8a;
+}
+
+.login-status.on {
+    color: #39ff14;
+    text-shadow: 0 0 5px #39ff14;
+}
+
+.logout-btn {
+    background: transparent;
+    border: 1px solid var(--red);
+    color: var(--red);
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: var(--red);
+    color: #111;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width:640px) {
+    .topbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .topbar nav {
+        text-align: center;
+    }
+
+    .login-bar {
+        justify-content: center;
+    }
+
+    .login-bar input[type="text"],
+    .login-bar input[type="password"] {
+        width: 100px;
+    }
+}

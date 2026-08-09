@@ -1,34 +1,88 @@
-{% extends 'freddyfazbearPizzaria/main.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
-<h1 class="neon-title">Freddy Fazbear's Pizza</h1>
-<p style="text-align: center;">A magical place for kids and grown-ups alike! Enjoy our world-class pizza and arcade games.</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freddy Fazbear's Pizza</title>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <script src="{% static 'script/home.js' %}" defer></script>
+</head>
+<body>
 
-<hr style="border-color: #555;">
+  <div class="topbar">
+    <nav>
+      <a href="#intro">Menu</a>
+      <a href="#contact">Monitor</a>
+      <a href="#about">Troubleshooting</a>
+      <a href="#order" class="order">Order Now</a>
+    </nav>
 
-<h2 class="neon-sub">Meet the Band!</h2>
-<p>Sing and dance with Freddy Fazbear, Bonnie the Bunny, and Chica the Chicken! Don't forget to visit Foxy in Pirate Cove!</p>
-<img src="https://via.placeholder.com/600x300/222/0ff?text=[+Picture+of+Animatronics+]" alt="Animatronic Band" class="placeholder">
+    <!-- LOGIN BAR (front-end demo only — no real backend) -->
+    <div class="login-bar">
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Employee ID" autocomplete="off">
+        <input type="password" id="password" placeholder="Password" autocomplete="off">
+        <button type="submit" class="login-btn">Log In</button>
+      </form>
+      <span id="loginStatus" class="login-status">Not logged in</span>
+      <button id="logoutBtn" class="logout-btn hidden">Log Out</button>
+    </div>
+  </div>
 
-<hr style="border-color: #555;">
+  <marquee class="neon-title" scrollamount="10">Welcome to Freddy Fazbear's Pizza! Where fantasy and fun come to life!
+  </marquee>
 
-<h2 class="neon-sub">Popular Menu</h2>
-<ul>
-    <li><strong>Fazbear's Ultimate Pepperoni:</strong> A classic favorite!</li>
-    <li><strong>Chica's Cupcake Surprise:</strong> Sweet and watching you!</li>
-    <li><strong>Foxy's Pirate Punch:</strong> Refreshing and slightly metallic.</li>
-</ul>
-<img src="https://via.placeholder.com/600x300/222/ff00ff?text=[+Picture+of+Menu+]" alt="Pizza Menu" class="placeholder">
+  <div class="content">
+    <h1 class="neon-title">Freddy Fazbear's Pizza</h1>
+    <p style="text-align:center;">A magical place for kids and grown-ups alike! Enjoy our world-class pizza and arcade
+      games.</p>
+    <hr style="border-color:#555;">
 
-<hr style="border-color: #555;">
+    <h2 class="neon-sub" id="about">Meet the Band!</h2>
+    <p>Sing and dance with Freddy Fazbear, Bonnie the Bunny, and Chica the Chicken! Don't forget to visit Foxy in Pirate
+      Cove!</p>
+    <svg class="placeholder" viewBox="0 0 600 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+      <rect width="600" height="260" fill="#0d0d0d" />
+      <text x="50%" y="50%" fill="#0ff" font-family="Courier New" font-size="20" text-anchor="middle"
+        dominant-baseline="middle">[ Picture of Animatronics ]</text>
+    </svg>
+    <hr style="border-color:#555;">
 
-<div class="news-alert">
-    <h3>LOCAL NEWS & UPDATES</h3>
-    <p><strong>Notice to Patrons:</strong> Management would like to assure all parents that the recent rumors regarding "foul odors" and "missing children" are completely unfounded. Freddy Fazbear's Pizza takes safety very seriously.</p>
-    <p><em>Unfortunately, due to unforeseen health department inspections and budget cuts, the restaurant will be closing its doors at the end of the year. We thank you for your patronage.</em></p>
-</div>
-{% endblock %}
+    <h2 class="neon-sub" id="intro">Popular Menu</h2>
+    <ul>
+      <li><strong>Fazbear's Ultimate Pepperoni:</strong> A classic favorite!</li>
+      <li><strong>Chica's Cupcake Surprise:</strong> Sweet and watching you!</li>
+      <li><strong>Foxy's Pirate Punch:</strong> Refreshing and slightly metallic.</li>
+    </ul>
+    <svg class="placeholder" viewBox="0 0 600 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+      <rect width="600" height="260" fill="#0d0d0d" />
+      <text x="50%" y="50%" fill="#ff00ff" font-family="Courier New" font-size="20" text-anchor="middle"
+        dominant-baseline="middle">[ Picture of Menu ]</text>
+    </svg>
+    <hr style="border-color:#555;">
 
-{% block footer %}
-    {% include 'freddyfazbearPizzaria/footer.html' %}
-{% endblock %}
+    <div class="news-alert">
+      <h3>LOCAL NEWS & UPDATES</h3>
+      <p><strong>Notice to Patrons:</strong> Management would like to assure all parents that the recent rumors
+        regarding "foul odors" and "missing children" are completely unfounded. Freddy Fazbear's Pizza takes safety very
+        seriously.</p>
+      <p><em>Unfortunately, due to unforeseen health department inspections and budget cuts, the restaurant will be
+          closing its doors at the end of the year. We thank you for your patronage.</em></p>
+    </div>
+  </div>
+
+  <footer id="contact" style="padding:20px; text-align:center;">
+    <div class="contact-info">
+      <p>Location: Hurricane, Utah</p>
+      <p>Call us: 1-800-FAZBEAR</p>
+    </div>
+    <div class="creepy-fine-print" style="font-size:0.75rem; color:#666; margin-top:10px;">
+      Fazbear Entertainment is not responsible for damage to property or person.
+    </div>
+  </footer>
+
+</body>
+
+</html>
