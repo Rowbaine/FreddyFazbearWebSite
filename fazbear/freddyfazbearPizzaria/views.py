@@ -11,8 +11,11 @@ room_list = [
 def homepage(request):
     return render(request, 'freddyfazbearPizzaria/home.html')
 
-def rooms(request):
-    return render(request, 'freddyfazbearPizzaria/room.html', {'rooms': room_list})
+def troubleshoot(request):
+    return render(request, 'freddyfazbearPizzaria/troubleshoot.html')
+
+def animatronics(request):
+    return render(request, 'freddyfazbearPizzaria/animatronics.html')
 
 def get_rooms(request, room_id):
     room = next((room for room in room_list if room['id'] == room_id), None)

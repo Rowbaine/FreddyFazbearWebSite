@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>System Troubleshooting — Freddy Fazbear's Pizza</title>
-  <link rel="stylesheet" href="{% static 'css/troubleshoot.css' %}">
+  <link rel="stylesheet" href="{% static 'css/troubleshoot_css.css' %}">
   <script src="{% static 'script/troubleshoot.js' %}" defer></script>
 </head>
 
@@ -16,7 +17,7 @@
       <a href="freddy-fazbears-pizza.html">Site</a>
       <a href="admin.html">Admin</a>
       <a href="employee-monitoring.html">Staff Monitor</a>
-      <a href="troubleshoot.html" class="active">Troubleshoot</a>
+      <a href="/troubleshoot/" class="active">Troubleshoot</a>
     </nav>
     <span class="badge">RESTRICTED ACCESS</span>
   </div>
@@ -25,7 +26,7 @@
     <h1>System Troubleshooting</h1>
     <p class="sub">Diagnostics for building systems and animatronic units</p>
 
-    <div class="grid">
+    <!-- <div class="grid">
       <div class="card">
         <h3><span class="status-dot dot-bad"></span>Foxy — Pirate Cove Unit</h3>
         <p>Unit shut down unexpectedly at 3:47 AM. Power draw spiked before loss of signal. Battery reads 12%.</p>
@@ -64,7 +65,7 @@
         <p>Both units idling normally, batteries above 90%, no diagnostic flags in the last 12 hours.</p>
         <button class="act">Run diagnostic anyway</button>
       </div>
-    </div>
+    </div> -->
 
     <div class="card" style="margin-top:24px;">
       <h3>Common Fixes Reference</h3>

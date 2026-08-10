@@ -1,0 +1,271 @@
+:root {
+    --pink: #ff00ff;
+    --cyan: #0ff;
+    --red: #ff2b2b;
+    --green: #39ff14;
+    --amber: #ffb300;
+    --bg: #0d0d0d;
+    --panel: #181818;
+    --line: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+a {
+    color: var(--cyan);
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #222;
+    padding: 12px 20px;
+    border-bottom: 3px solid var(--pink);
+}
+
+.topbar nav a {
+    color: var(--cyan);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--cyan);
+    font-size: 0.9rem;
+}
+
+.topbar nav a.active {
+    color: var(--pink);
+    text-shadow: 0 0 8px var(--pink);
+}
+
+.badge {
+    border: 1px solid var(--red);
+    color: var(--red);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    text-shadow: 0 0 5px var(--red);
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.who {
+    font-size: 0.78rem;
+    color: #7fffd4;
+}
+
+.logout-btn {
+    background: transparent;
+    border: 1px solid var(--red);
+    color: var(--red);
+    font-family: inherit;
+    font-size: 0.78rem;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: var(--red);
+    color: #111;
+}
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--pink);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--pink);
+}
+
+.sub {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: -8px;
+}
+
+.unit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.unit-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    overflow: hidden;
+}
+
+.unit-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+}
+
+.unit-head h3 {
+    margin: 0;
+    color: var(--cyan);
+    text-shadow: 0 0 5px var(--cyan);
+    font-size: 1.05rem;
+}
+
+.status-pill {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+.pill-ok {
+    color: var(--green);
+    border-color: var(--green);
+    text-shadow: 0 0 4px var(--green);
+}
+
+.pill-warn {
+    color: var(--amber);
+    border-color: var(--amber);
+    text-shadow: 0 0 4px var(--amber);
+}
+
+.pill-bad {
+    color: var(--red);
+    border-color: var(--red);
+    text-shadow: 0 0 4px var(--red);
+}
+
+.avatar {
+    background: #050505;
+    padding: 10px;
+}
+
+.avatar svg {
+    width: 100%;
+    height: 140px;
+    display: block;
+}
+
+.unit-body {
+    padding: 14px 16px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin: 6px 0;
+    color: #ccc;
+}
+
+.row span:first-child {
+    color: #888;
+}
+
+.bar-bg {
+    background: #000;
+    border: 1px solid var(--line);
+    height: 10px;
+    margin-top: 4px;
+}
+
+.bar-fill {
+    height: 100%;
+}
+
+.bar-fill.ok {
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green);
+}
+
+.bar-fill.warn {
+    background: var(--amber);
+    box-shadow: 0 0 6px var(--amber);
+}
+
+.bar-fill.bad {
+    background: var(--red);
+    box-shadow: 0 0 6px var(--red);
+}
+
+.unit-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+button.act {
+    background: transparent;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    font-family: inherit;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+button.act:hover {
+    background: var(--cyan);
+    color: #111;
+}
+
+button.act.danger {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+button.act.danger:hover {
+    background: var(--red);
+    color: #111;
+}
+
+.mini-log {
+    background: #000;
+    border: 1px solid var(--line);
+    font-size: 0.72rem;
+    padding: 8px;
+    margin-top: 12px;
+    max-height: 90px;
+    overflow-y: auto;
+}
+
+.mini-log p {
+    margin: 2px 0;
+    color: #7fffd4;
+}
+
+.mini-log p.warn {
+    color: var(--amber);
+}
+
+.mini-log p.bad {
+    color: var(--red);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.75rem;
+    color: #555;
+}
