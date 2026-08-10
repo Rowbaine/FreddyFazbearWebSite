@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator — Freddy Fazbear's Pizza</title>
+    <link rel="stylesheet" href="{% static 'css/login_css.css' %}">
+    <script src="{% static 'script/login.js' %}" defer></script>
+</head>
+
+<body>
+
+    <div id="loginGate" class="gate-wrap">
+        <div class="gate-panel">
+            <h1>Freddy Fazbear's</h1>
+            <p class="sub">Administrator Sign-In — Store #01</p>
+            <form id="loginForm">
+                <label for="username">Employee ID</label>
+                <input type="text" id="username" placeholder="e.g. M. Schmidt" autocomplete="off">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" autocomplete="off">
+                <button type="submit">Log In</button>
+                <div class="gate-error" id="gateError"></div>
+            </form>
+            <p class="gate-note">Demo login — any Employee ID logs you in. This is a fan-made interface, no real
+                credentials are checked.</p>
+        </div>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <div class="topbar">
+            <nav>
+                <a href="freddy-fazbears-pizza.html" class="active">Dashboard</a>
+                <a href="employee-monitoring.html">Employee</a>
+                <a href="troubleshoot.html">Troubleshoot</a>
+                <a href="animatronic.html">Animatronic</a>
+                <a href="fazlogs.html">FazLogs</a>
+            </nav>
+            <div class="top-right">
+                <span class="who" id="whoText"></span>
+                <span class="badge">RESTRICTED ACCESS</span>
+                <button class="logout-btn" id="logoutBtn">Log Out</button>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <h1 class="dash-title">Administrator</h1>
+            <p class="sub">Fazbear Entertainment Internal Systems — Store #01, Hurricane UT</p>
+
+            <div class="stat-strip">
+                <div class="stat-card">
+                    <div class="num ok">3/4</div>
+                    <div class="label">Animatronics Online</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num ok">3</div>
+                    <div class="label">Staff On Shift</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num warn">2</div>
+                    <div class="label">Open Tickets</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num ok">62%</div>
+                    <div class="label">Power Draw</div>
+                </div>
+            </div>
+
+            <div class="section-grid">
+                <a href="employee-monitoring.html" class="section-card employee">
+                    <div class="icon">🧑‍🍳</div>
+                    <h2>Employee</h2>
+                    <p>Shift roster, camera overview, and staff activity monitoring.</p>
+                    <span class="flag flag-ok">3 on shift</span>
+                    <span class="go">Open →</span>
+                </a>
+
+                <a href="troubleshoot.html" class="section-card troubleshoot">
+                    <div class="icon">🛠️</div>
+                    <h2>Troubleshoot</h2>
+                    <p>Diagnostics for animatronics, cameras, HVAC, and building systems. Log new maintenance tickets.
+                    </p>
+                    <span class="flag flag-warn">2 open issues</span>
+                    <span class="go">Open →</span>
+                </a>
+
+                <a href="animatronic.html" class="section-card animatronic">
+                    <div class="icon">🤖</div>
+                    <h2>Animatronic</h2>
+                    <p>Live status, battery, and servo health for Freddy, Bonnie, Chica, and Foxy.</p>
+                    <span class="flag flag-bad">Foxy offline</span>
+                    <span class="go">Open →</span>
+                </a>
+
+                <a href="fazlogs.html" class="section-card fazlogs">
+                    <div class="icon">📜</div>
+                    <h2>FazLogs</h2>
+                    <p>Full searchable history — system events, animatronic activity, staff notes, and maintenance
+                        tickets.</p>
+                    <span class="flag flag-ok">15 entries today</span>
+                    <span class="go">Open →</span>
+                </a>
+            </div>
+        </div>
+
+        <footer>Fazbear Entertainment — Internal Use Only. This is a fan-made demo interface, not a real security
+            system.</footer>
+    </div>
+
+</body>
+
+</html>

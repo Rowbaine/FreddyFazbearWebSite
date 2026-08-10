@@ -1,0 +1,222 @@
+:root {
+    --pink: #ff00ff;
+    --cyan: #0ff;
+    --red: #ff2b2b;
+    --green: #39ff14;
+    --amber: #ffb300;
+    --bg: #0d0d0d;
+    --panel: #181818;
+    --line: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+a {
+    color: var(--cyan);
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #222;
+    padding: 12px 20px;
+    border-bottom: 3px solid var(--pink);
+}
+
+.topbar nav a {
+    color: var(--cyan);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--cyan);
+    font-size: 0.9rem;
+}
+
+.topbar nav a.active {
+    color: var(--pink);
+    text-shadow: 0 0 8px var(--pink);
+}
+
+.badge {
+    border: 1px solid var(--red);
+    color: var(--red);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    text-shadow: 0 0 5px var(--red);
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.who {
+    font-size: 0.78rem;
+    color: #7fffd4;
+}
+
+.logout-btn {
+    background: transparent;
+    border: 1px solid var(--red);
+    color: var(--red);
+    font-family: inherit;
+    font-size: 0.78rem;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: var(--red);
+    color: #111;
+}
+
+.wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--pink);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--pink);
+}
+
+.sub {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: -8px;
+}
+
+.cam-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.cam {
+    background: #000;
+    border: 1px solid var(--line);
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.cam .label {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    font-size: 0.7rem;
+    color: var(--green);
+    text-shadow: 0 0 4px var(--green);
+    z-index: 2;
+}
+
+.cam .rec {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 0.7rem;
+    color: var(--red);
+    z-index: 2;
+}
+
+.cam svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.9;
+}
+
+.cam.offline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+    font-size: 0.85rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+    font-size: 0.85rem;
+}
+
+th,
+td {
+    border: 1px solid var(--line);
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #222;
+    color: var(--cyan);
+}
+
+.status-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.dot-ok {
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green);
+}
+
+.dot-warn {
+    background: var(--amber);
+    box-shadow: 0 0 6px var(--amber);
+}
+
+.dot-bad {
+    background: var(--red);
+    box-shadow: 0 0 6px var(--red);
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 16px;
+    margin-top: 24px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--cyan);
+    text-shadow: 0 0 5px var(--cyan);
+    font-size: 1rem;
+}
+
+.note {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.75rem;
+    color: #555;
+}

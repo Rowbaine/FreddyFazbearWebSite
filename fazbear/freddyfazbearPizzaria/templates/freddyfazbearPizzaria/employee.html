@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Monitor — Freddy Fazbear's Pizza</title>
+ 
+</head>
+
+<body>
+
+    <div class="topbar">
+        <nav>
+            <a href="freddy-fazbears-pizza.html">Dashboard</a>
+            <a href="employee-monitoring.html" class="active">Employee</a>
+            <a href="troubleshoot.html">Troubleshoot</a>
+            <a href="animatronic.html">Animatronic</a>
+            <a href="fazlogs.html">FazLogs</a>
+        </nav>
+        <div class="top-right">
+            <span class="who" id="whoText"></span>
+            <span class="badge">RESTRICTED ACCESS</span>
+            <button class="logout-btn" id="logoutBtn">Log Out</button>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <h1>Employee Monitor</h1>
+        <p class="sub">Shift oversight & building camera overview — for scheduling and safety purposes</p>
+
+        <div class="cam-grid">
+            <div class="cam">
+                <span class="label">CAM 01 — SHOW STAGE</span><span class="rec">● REC</span>
+                <svg viewBox="0 0 300 190">
+                    <rect width="300" height="190" fill="#0a0a0a" /><text x="50%" y="50%" fill="#0ff"
+                        font-family="Courier New" font-size="12" text-anchor="middle">no motion detected</text>
+                </svg>
+            </div>
+            <div class="cam">
+                <span class="label">CAM 02 — DINING AREA</span><span class="rec">● REC</span>
+                <svg viewBox="0 0 300 190">
+                    <rect width="300" height="190" fill="#0a0a0a" /><text x="50%" y="50%" fill="#0ff"
+                        font-family="Courier New" font-size="12" text-anchor="middle">1 staff present</text>
+                </svg>
+            </div>
+            <div class="cam">
+                <span class="label">CAM 03 — KITCHEN</span><span class="rec">● REC</span>
+                <svg viewBox="0 0 300 190">
+                    <rect width="300" height="190" fill="#0a0a0a" /><text x="50%" y="50%" fill="#0ff"
+                        font-family="Courier New" font-size="12" text-anchor="middle">1 staff present</text>
+                </svg>
+            </div>
+            <div class="cam offline">CAM 04 — PIRATE COVE<br>signal lost</div>
+        </div>
+
+        <div class="card">
+            <h3>Current Shift Roster</h3>
+            <table>
+                <tr>
+                    <th>Employee</th>
+                    <th>Role</th>
+                    <th>Clock In</th>
+                    <th>Status</th>
+                    <th>Last Seen</th>
+                </tr>
+                <tr>
+                    <td>M. Schmidt</td>
+                    <td>Night Security</td>
+                    <td>12:00 AM</td>
+                    <td><span class="status-dot dot-ok"></span>On shift</td>
+                    <td>Office — 2 min ago</td>
+                </tr>
+                <tr>
+                    <td>J. Ramirez</td>
+                    <td>Kitchen Staff</td>
+                    <td>4:00 PM</td>
+                    <td><span class="status-dot dot-ok"></span>On shift</td>
+                    <td>Kitchen — 1 min ago</td>
+                </tr>
+                <tr>
+                    <td>T. Cole</td>
+                    <td>Party Host</td>
+                    <td>10:00 AM</td>
+                    <td><span class="status-dot dot-warn"></span>Clocked out late</td>
+                    <td>Dining Area — 40 min ago</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>Shift Notes</h3>
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Note</th>
+                </tr>
+                <tr>
+                    <td>11:58 PM</td>
+                    <td>Handoff complete, day shift briefed night security on Cam 04 outage.</td>
+                </tr>
+                <tr>
+                    <td>2:10 AM</td>
+                    <td>Security did a walkthrough of dining area, all clear.</td>
+                </tr>
+                <tr>
+                    <td>3:22 AM</td>
+                    <td>Reminded to check on Chica's servo diagnostic before opening.</td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="note">This page is for shift coverage and building safety monitoring only. Camera feeds shown are
+            placeholders in this demo.</p>
+    </div>
+
+    <footer>Fazbear Entertainment — Internal Use Only. This is a fan-made demo interface, not a real monitoring system.
+    </footer>
+</body>
+</html>
