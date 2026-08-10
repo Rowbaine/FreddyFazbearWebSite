@@ -12,7 +12,10 @@ class user(models.Model):
         return self.username
 
 class animatronic(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
+    battery_level = models.IntegerField(default=100)
+    servo_health = models.IntegerField(default=100)
     description = models.TextField()
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
