@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Freddy Fazbear's Pizza</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard_css.css' %}">
+
+</head>
+
+<body>
+
+    <div class="topbar">
+        <nav>
+            <a href="freddy-fazbears-pizza.html">Home</a>
+            <a href="admin.html" class="active">Dashboard</a>
+            <a href="employee-monitoring.html">Employee</a>
+            <a href="troubleshoot.html">Troubleshoot</a>
+            <a href="animatronic-monitoring.html">Animatronic</a>
+            <a href="fazlogs.html">FazLogs</a>
+            <a href="login.html">Login</a>
+        </nav>
+        <span class="badge">RESTRICTED ACCESS</span>
+    </div>
+
+    <div class="wrap">
+        <h1>Admin Dashboard</h1>
+        <p class="sub">Fazbear Entertainment Internal Systems — Store #01, Hurricane UT</p>
+
+        <div class="grid">
+            <div class="card">
+                <div class="label">Animatronics Online</div>
+                <div class="stat ok">3 / 4</div>
+            </div>
+            <div class="card">
+                <div class="label">Active Staff On Shift</div>
+                <div class="stat ok">3</div>
+            </div>
+            <div class="card">
+                <div class="label">Open Maintenance Tickets</div>
+                <div class="stat warn">2</div>
+            </div>
+            <div class="card">
+                <div class="label">Building Power Draw</div>
+                <div class="stat ok">62%</div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:24px;">
+            <h3>Animatronic Status</h3>
+            <table>
+                <tr>
+                    <th>Unit</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Battery / Power</th>
+                </tr>
+                <tr>
+                    <td>Freddy Fazbear</td>
+                    <td>Show Stage</td>
+                    <td><span class="status-dot dot-ok"></span>Idle</td>
+                    <td>98%</td>
+                </tr>
+                <tr>
+                    <td>Bonnie</td>
+                    <td>Show Stage</td>
+                    <td><span class="status-dot dot-ok"></span>Idle</td>
+                    <td>95%</td>
+                </tr>
+                <tr>
+                    <td>Chica</td>
+                    <td>Kitchen (backstage)</td>
+                    <td><span class="status-dot dot-warn"></span>Diagnostics running</td>
+                    <td>81%</td>
+                </tr>
+                <tr>
+                    <td>Foxy</td>
+                    <td>Pirate Cove</td>
+                    <td><span class="status-dot dot-bad"></span>Offline — needs service</td>
+                    <td>12%</td>
+                </tr>
+            </table>
+            <div class="actions">
+                <a href="animatronic-monitoring.html"><button class="act">Open animatronic monitor</button></a>
+                <button class="act danger">Force restart unit</button>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:24px;">
+            <h3>Staff Overview</h3>
+            <table>
+                <tr>
+                    <th>Employee</th>
+                    <th>Role</th>
+                    <th>Shift</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>M. Schmidt</td>
+                    <td>Night Security</td>
+                    <td>12AM – 6AM</td>
+                    <td><span class="status-dot dot-ok"></span>On shift</td>
+                </tr>
+                <tr>
+                    <td>J. Ramirez</td>
+                    <td>Kitchen Staff</td>
+                    <td>4PM – 10PM</td>
+                    <td><span class="status-dot dot-ok"></span>On shift</td>
+                </tr>
+                <tr>
+                    <td>T. Cole</td>
+                    <td>Party Host</td>
+                    <td>10AM – 4PM</td>
+                    <td><span class="status-dot dot-warn"></span>Clocked out late</td>
+                </tr>
+            </table>
+            <div class="actions">
+                <a href="employee-monitoring.html"><button class="act">Open staff monitor</button></a>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:24px;">
+            <h3>System Log</h3>
+            <div class="log">
+                <p>[03:14] Freddy — routine idle cycle complete.</p>
+                <p class="warn">[03:22] Chica — self-diagnostic flagged servo lag (arm, left).</p>
+                <p>[03:40] Front door — locked, motion sensors nominal.</p>
+                <p class="bad">[03:47] Foxy — unit went offline unexpectedly. Power draw spiked before shutdown.</p>
+                <p>[04:02] Security camera feed 04 — restarted after brief signal loss.</p>
+                <p class="warn">[04:15] Backstage temperature reading 3° above normal range.</p>
+                <p>[04:30] Building — no unauthorized entry detected.</p>
+            </div>
+            <div class="actions">
+                <a href="troubleshoot.html"><button class="act">Open troubleshooting tools</button></a>
+                <a href="fazlogs.html"><button class="act">Open full FazLogs</button></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>Fazbear Entertainment — Internal Use Only. This is a fan-made demo interface, not a real security system.
+    </footer>
+
+</body>
+
+</html>

@@ -1,87 +1,87 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Freddy Fazbear's Pizza</title>
+  <title>Administrator — Freddy Fazbear's Pizza</title>
   <link rel="stylesheet" href="{% static 'css/home_css.css' %}">
   <script src="{% static 'script/home.js' %}" defer></script>
 </head>
+
 <body>
 
   <div class="topbar">
     <nav>
-      <a href="#intro">Menu</a>
-      <a href="#contact">Monitor</a>
-      <a href="/troubleshoot">Troubleshooting</a>
-      <a href="/animatronics" class="order">Animatronics</a>
+      <a href="freddy-fazbears-pizza.html" class="active">Home</a>
+      <a href="admin.html">Dashboard</a>
+      <a href="employee-monitoring.html">Employee</a>
+      <a href="troubleshoot.html">Troubleshoot</a>
+      <a href="animatronic-monitoring.html">Animatronic</a>
+      <a href="fazlogs.html">FazLogs</a>
+      <a href="login.html">Login</a>
     </nav>
+    <span class="badge">RESTRICTED ACCESS</span>
+  </div>
 
-    <!-- LOGIN BAR (front-end demo only — no real backend) -->
-    <div class="login-bar">
-      <form id="loginForm">
-        <input type="text" id="username" placeholder="Employee ID" autocomplete="off">
-        <input type="password" id="password" placeholder="Password" autocomplete="off">
-        <button type="submit" class="login-btn">Log In</button>
-      </form>
-      <span id="loginStatus" class="login-status">Not logged in</span>
-      <button id="logoutBtn" class="logout-btn hidden">Log Out</button>
+  <div class="wrap">
+    <h1>Administrator Hub</h1>
+    <p class="sub">Fazbear Entertainment Internal Systems — Store #01, Hurricane UT</p>
+
+    <div class="status-strip">
+      <span><span class="dot dot-ok"></span>3 units online</span>
+      <span><span class="dot dot-bad"></span>1 unit offline</span>
+      <span><span class="dot dot-ok"></span>3 staff on shift</span>
+      <span><span class="dot dot-warn"></span>2 open tickets</span>
+    </div>
+
+    <div class="tile-grid">
+      <a class="tile" href="employee-monitoring.html">
+        <span class="icon">👥</span>
+        <h2>1. Employee</h2>
+        <p>Shift roster, clock-in status, and camera overview of on-duty staff across the building.</p>
+        <span class="tag">Staff Monitor</span>
+      </a>
+
+      <a class="tile" href="troubleshoot.html">
+        <span class="icon">🛠️</span>
+        <h2>2. Troubleshoot</h2>
+        <p>Diagnostics for animatronics, cameras, HVAC and doors, plus a maintenance ticket form.</p>
+        <span class="tag">System Diagnostics</span>
+      </a>
+
+      <a class="tile" href="animatronic-monitoring.html">
+        <span class="icon">🤖</span>
+        <h2>3. Animatronic</h2>
+        <p>Live-style telemetry per unit — battery, servo health, internal temperature, and uptime.</p>
+        <span class="tag">Unit Telemetry</span>
+      </a>
+
+      <a class="tile" href="fazlogs.html">
+        <span class="icon">📋</span>
+        <h2>4. FazLogs</h2>
+        <p>Unified, filterable event log spanning every system in the building overnight and beyond.</p>
+        <span class="tag">Event Log</span>
+      </a>
+
+      <a class="tile login-tile" href="login.html">
+        <span class="icon">🔑</span>
+        <h2>5. Login</h2>
+        <p>Sign in with your Employee ID to access restricted panels and confirm your session.</p>
+        <span class="tag">Staff Login</span>
+      </a>
+
+      <a class="tile" href="admin.html">
+        <span class="icon">📊</span>
+        <h2>Dashboard</h2>
+        <p>Full overview panel — unit status, staff table, and the raw system log in one view.</p>
+        <span class="tag">Overview</span>
+      </a>
     </div>
   </div>
 
-  <marquee class="neon-title" scrollamount="10">Welcome to Freddy Fazbear's Pizza! Where fantasy and fun come to life!
-  </marquee>
-
-  <div class="content">
-    <h1 class="neon-title">Freddy Fazbear's Pizza</h1>
-    <p style="text-align:center;">A magical place for kids and grown-ups alike! Enjoy our world-class pizza and arcade
-      games.</p>
-    <hr style="border-color:#555;">
-
-    <h2 class="neon-sub" id="about">Meet the Band!</h2>
-    <p>Sing and dance with Freddy Fazbear, Bonnie the Bunny, and Chica the Chicken! Don't forget to visit Foxy in Pirate
-      Cove!</p>
-    <svg class="placeholder" viewBox="0 0 600 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
-      <rect width="600" height="260" fill="#0d0d0d" />
-      <text x="50%" y="50%" fill="#0ff" font-family="Courier New" font-size="20" text-anchor="middle"
-        dominant-baseline="middle">[ Picture of Animatronics ]</text>
-    </svg>
-    <hr style="border-color:#555;">
-
-    <h2 class="neon-sub" id="intro">Popular Menu</h2>
-    <ul>
-      <li><strong>Fazbear's Ultimate Pepperoni:</strong> A classic favorite!</li>
-      <li><strong>Chica's Cupcake Surprise:</strong> Sweet and watching you!</li>
-      <li><strong>Foxy's Pirate Punch:</strong> Refreshing and slightly metallic.</li>
-    </ul>
-    <svg class="placeholder" viewBox="0 0 600 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
-      <rect width="600" height="260" fill="#0d0d0d" />
-      <text x="50%" y="50%" fill="#ff00ff" font-family="Courier New" font-size="20" text-anchor="middle"
-        dominant-baseline="middle">[ Picture of Menu ]</text>
-    </svg>
-    <hr style="border-color:#555;">
-
-    <div class="news-alert">
-      <h3>LOCAL NEWS & UPDATES</h3>
-      <p><strong>Notice to Patrons:</strong> Management would like to assure all parents that the recent rumors
-        regarding "foul odors" and "missing children" are completely unfounded. Freddy Fazbear's Pizza takes safety very
-        seriously.</p>
-      <p><em>Unfortunately, due to unforeseen health department inspections and budget cuts, the restaurant will be
-          closing its doors at the end of the year. We thank you for your patronage.</em></p>
-    </div>
-  </div>
-
-  <footer id="contact" style="padding:20px; text-align:center;">
-    <div class="contact-info">
-      <p>Location: Hurricane, Utah</p>
-      <p>Call us: 1-800-FAZBEAR</p>
-    </div>
-    <div class="creepy-fine-print" style="font-size:0.75rem; color:#666; margin-top:10px;">
-      Fazbear Entertainment is not responsible for damage to property or person.
-    </div>
-  </footer>
+  <footer>Fazbear Entertainment — Internal Use Only. This is a fan-made demo interface, not a real building management
+    system.</footer>
 
 </body>
 
