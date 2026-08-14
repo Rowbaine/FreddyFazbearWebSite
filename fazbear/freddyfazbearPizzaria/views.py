@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import animatronic
+from .models import *
 
 
 def homepage(request):
@@ -10,5 +10,4 @@ def troubleshoot(request):
     return render(request, 'freddyfazbearPizzaria/troubleshoot.html')
 
 def animatronics(request):
-    animatronics_list = animatronic.objects.all()
-    return render(request, 'freddyfazbearPizzaria/animatronics.html', {'animatronics': animatronics_list})
+    return render(request, 'freddyfazbearPizzaria/animatronics.html')
